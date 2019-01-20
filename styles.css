@@ -4,16 +4,16 @@ html{
     -webkit-text-size-adjust: 100%;
     font-style: normal;
     font-weight: 100;
-
+    box-sizing: border-box;
     margin: -1%;
+    overflow: scroll;
     
 }
 h1, h2, h3, h4, h5, h6{
     text-transform: uppercase; 
     margin-left: 7%;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    font-family: sans-serif;
+    font-weight: 700;
+    font-family: monospace;
 }
 
 .top{
@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     align-items: center;
     background-size: cover;
-
 }
 h1 a{
     text-align: left;
@@ -33,7 +32,6 @@ h1 a{
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    
 }
 
 nav{
@@ -59,14 +57,20 @@ div a:-webkit-any-link {
 }
 
 #foot{
-    
+    font-size: 1em;
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     grid-gap: 2%;
     padding: 0 auto;
     border: 0 auto;
     margin: 3% 7%;
-
+}
+.footer{
+    font-size: 0.8em;
+    line-height: 0.5;
+}
+li{
+    line-height: 2;
 }
 .dark{
     
@@ -80,8 +84,7 @@ div a:-webkit-any-link {
     color: white;
 }
 .white{
-   
-    background-color: white;
+       background-color: white;
     color: black;
     width: 100%;
     padding: 1%;
@@ -112,7 +115,6 @@ img{
     filter: grayscale(100%);
     max-width: 80%; 
 }
-
 .partners{
     display: block;
     max-inline-size: -webkit-fill-available;
@@ -146,7 +148,31 @@ img{
     grid-row-gap: 2%;
     margin: 6% 4%;
 }
-  
+.event{
+    border: 1px solid grey;
+    margin-bottom: 1em;
+    text-align: left;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 6fr 3fr;
+    margin: 1% 7%;
+    grid-gap: 1%;
+}
+.smallLetters{
+    font-size: 0.6em;
+}
+.jsBootcamp{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    margin: 5% 7%;
+    margin-bottom: 1em;
+    text-align: left;
+    padding: 1em;
+}
+#banner {
+    max-width: 90%;
+    margin-top: 2%;
+}
 @media screen and (max-width:800px){
     
     .backgroundImg{
@@ -154,7 +180,7 @@ img{
         position: center;
         
     }
-    #future, .letstalk, #thisIsUs ,#columns, #outcomes, #foot {
+    #future, .letstalk, #thisIsUs ,#columns, #outcomes, #foot, .jsBootcamp {
         grid-template-columns: 1fr;
         grid-gap: 0;
     }
